@@ -1,0 +1,132 @@
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.2em;
+    height: 1.6em;
+    /* border: 1px solid red; */
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: #223243; */
+    background-color:#1CA39B;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 20px;
+    left: 0.4em;
+    bottom: 0.2em;
+    /* background-color: #223243; */
+    background-color:#1CA39B;
+    box-shadow: inset 2px -2px 0 1.8px #fff;
+    transition: .4s;
+    animation: anima1 0.3s linear;
+    /* border: 1px solid red; */
+  }
+  
+  @keyframes anima1 {
+    0% {
+      transform: translateX(1.5em);
+    }
+  
+    80% {
+      transform: translateX(-0.3em);
+    }
+  
+    100% {
+      transform: translateX(0em);
+    }
+  }
+  
+  .switch input:checked + .slider:before {
+    background-color: yellow;
+    box-shadow: none;
+    transform: translateX(1.5em);
+    animation: anima 0.3s linear;
+  }
+  
+  @keyframes anima {
+    0% {
+      transform: translateX(0px)
+    }
+  
+    80% {
+      transform: translateX(1.6em)
+    }
+  
+    100% {
+      transform: translateX(1.4em)
+    }
+  }
+
+  /* ============================================ */
+  .resumeBtn {
+    padding: 0.8em 1.8em;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    background-color: #1CA39B;
+   }
+   .resumeBtn > a{
+       text-decoration: none;
+       /* color: whitesmoke; */
+       color: white;
+   }
+   
+   .resumeBtn::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background:#0B3F3B;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .resumeBtn:hover::before {
+    width: 105%;
+   }
+   
+   .resumeBtn:hover {
+    color: white;
+   }
+   
+   .hireBtn{
+       margin-left: 30px
+   }
