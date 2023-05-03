@@ -1,8 +1,29 @@
+// ========== CHANGE THEME
 const body = document.querySelector("body")
-const btn = document.querySelector("#switchThemeBtn")
+const themeBtn = document.querySelector("#switchThemeBtn")
 
+function theme(){
+    
+    if(localStorage.getItem("theme")){
+        document.querySelector("body").classList.add("dark_theme")
+    }else{
+        document.querySelector("body").classList.remove("dark_theme")
 
-btn.addEventListener("click",()=>{
-    body.classList.toggle("dark_theme")
-    // alert()
+    }
+
+}
+
+theme()
+
+themeBtn.addEventListener("click",function(){
+
+    if(localStorage.getItem("theme")){
+        localStorage.clear()
+        theme()
+
+    }else{
+        localStorage.setItem("theme",true)
+        theme()
+
+    }
 })
