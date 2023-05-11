@@ -23,7 +23,7 @@ body{
     font-family:sans-serif;
     font-weight: bold;
     /* position: relative; */
-    /* overflow: hidden; */
+    /* overflow: hidden !important; */
 }
 /* ================== NAVIGATION */
 nav{
@@ -278,7 +278,7 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     border: 3px dotted var(--color-light);
     width: 500px;
     margin-left: 75px;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
 }
 .hero_hand{
@@ -323,12 +323,12 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     }
 }
 
-.hero_info_container > div > div > p{
+.hero_info_container > div > div:nth-child(1) > p{
     color: var(--color-light);
     line-height: 25px;
     font-weight: bolder;
-    letter-spacing: 2px;
-    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-size: 18px;
     /* border: 1px solid red; */
     /* text-align: center; */
 }
@@ -338,6 +338,20 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     margin: 10px 0px;
     font-weight: bolder;
     -webkit-text-stroke: 1px black;
+}
+/* .hero_info_container > div > div:nth-child(1) > p:nth-child(5){
+    font-size: 17px;
+} */
+.hero_info_container > div > div > span{
+    /* color: var(--color-light); */
+    line-height: 25px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 22px;
+    color: var(--color-light);
+    /* color: transparent; */
+    /* color:hsl(64, 100%, 80%); */
+    /* -webkit-text-stroke: 1px black; */
 }
 .hero_info_container > div > div:nth-child(2) > p{
     /* padding: 20px 60px;
@@ -511,6 +525,12 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     font-weight: normal;
     font-size: 11px;
     margin: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.projects > div > ul > li:hover{
+    transform: scale(1.2);
+    /* background-color: var(--color-light); */
 }
 .projects > div > div{
     /* border: 1px solid; */
@@ -625,16 +645,13 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
 
 /* Footer */
 footer{
-    /* margin-top: 13vh; */
+    /* margin-top: 5vh; */
     text-align: center;
-    /* color: var(--nav-envelope); */
     color: var(--color-light);
-    /* border: 1px solid red; */
     background-color: var(--nav-envelope);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 7px;
     font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
