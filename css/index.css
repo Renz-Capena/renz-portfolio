@@ -26,6 +26,9 @@ body{
     /* overflow: hidden !important; */
 }
 /* ================== NAVIGATION */
+.navBtn,.closeBtnNav{
+    display: none;
+}
 nav{
     /* border: 1px dotted tomato; */
     display: flex;
@@ -654,4 +657,192 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+.bg_layer_nav{
+    position: absolute;
+    /* height: 100vh;
+    width: 100vw; */
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.568);
+    z-index: 4;
+    position: fixed;
+    display: none;
+}
+.bg_layer_nav_show{
+    display: block;
+    /* transform: rotate(); */
+}
+
+
+
+/* ================== RESPONSOVE */
+
+@media (max-width: 768px){
+    *{
+        /* border: 1px solid red; */
+    }
+    header{
+        /* border: 1px solid red; */
+        /* background-color: #000000e1; */
+        width: 100%;
+        height: 48px;
+        /* height: 100vh; */
+        /* border: 1px solid red; */
+        /* position: absolute; */
+        /* position: fixed; */
+        /* position: relative; */
+        /* transform:translateX(-100%); */
+        /* transition: 0.3s; */
+    }
+    .navBtn{
+        /* display: unset; */
+        display: block;
+        color: var(--color-light);
+        width: fit-content;
+        font-size: 20px;
+        margin: 25px 0px 0px 15px;
+        /* border: 1px solid red; */
+    }
+    .closeBtnNav{
+        display: block;
+        color: white;
+        /* border: 1px solid red; */
+        width: fit-content;
+        font-size: 20px;
+        margin: 30px 0px 0px 15px;
+        transition: 0.5s;
+    }
+    .display_hide{
+        /* display: none; */
+        filter: opacity(0.1);
+    }
+ 
+    nav{
+        display: block;
+        /* align-items: flex-start;
+        justify-content: center; */
+        margin: unset;
+        width: 50%;
+        height: 100vh;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        position: fixed;
+        background-color: #000000e1;
+        transform:translateX(-100%);
+        transition: 0.3s;
+    }
+    .nav_show{
+        transform:translateX(0%);
+    }
+    nav > ul {
+        /* margin: unset; */
+        display: block;
+        /* border: 1px solid green; */
+        /* padding: unset; */
+        margin-top: 5vh;
+        height: 95vh;
+    }
+    nav > ul > li{
+        /* border: 1px solid; */
+        margin: 20px 0px;
+        text-align: center;
+        padding: 10px 40px;
+    }
+    nav > ul > li > a{
+        color: white;
+    }
+    nav > ul > li:nth-child(4){
+        width: fit-content;
+        margin: auto;
+    }
+    /* ================ HERO CONTAINER */
+    .section_hero{
+        /* border: 1px solid red; */
+        display: block;
+        min-height: 120vh;
+        /* position: relative; */
+        /* overflow: hidden; */
+    }
+    .hero_container{
+        margin: unset;
+        padding: 10px 5px;
+        /* display: none; */
+        /* border: 1px solid red; */
+        width: 90%;
+        margin: auto;
+        /* background: none; */
+        margin-top: 3vh;
+        /* filter: opacity(0.5); */
+        /* box-shadow: 5px 5px 10px ; */
+
+    }
+    .hero_info_container{
+        /* display: none; */
+        /* border: 1px solid rgb(120, 71, 255); */
+        display: block;
+        text-align: center;
+    }
+    .hero_info_container > img{
+        width: 60vw;
+        height: 60vw;
+    }
+    .hero_info_container > div{
+        /* display: none; */
+        margin: unset;
+        padding: unset;
+        width: 100%;
+        padding: 20px 0px;
+        /* border: 1px solid red; */
+        margin-top: 20px;
+    }
+    .hero_info_container > div > div:nth-child(1) {
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+    .hero_info_container > div > div:nth-child(1) > p{
+        padding: unset;
+        font-size: clamp(10px,5vw,20px);
+        /* text-align: left; */
+        letter-spacing: 1.3px;
+        font-weight: bold;
+    }
+    .hero_info_container > div > div > p:nth-child(2){
+        /* border: 1px solid red; */
+        padding: unset;
+        font-size: clamp(10px,10vw,25px);
+    }
+    .hero_intro{
+        /* display: none; */
+        /* border: 1px solid red; */
+        display: block;
+        width: 95%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .hero_intro > div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        /* margin: unset !important; */
+    }
+    .hero_intro > div > button{
+        margin: unset;
+    }
+
+
+
+
+
+
+
+
+    .projects_container{
+        display: none;
+    }
+    .other_works_projects{
+        display: none;
+    }
 }
