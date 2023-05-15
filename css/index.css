@@ -87,6 +87,7 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     right: 0;
     overflow: hidden;
     height: 370vh;
+    position: fixed;
     /* inset: 0; */
     /* border: 1px solid red; */
 }
@@ -122,6 +123,7 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     animation-duration: 11s;
 }
 .bg_layer div:nth-child(3){
+    display: none;
     border: 1px solid rgb(0, 121, 101);
     width: 15vw;
     height: 20vw;
@@ -135,6 +137,7 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     animation-duration: 17s;
 }
 .bg_layer div:nth-child(4){
+    display: none;
     border: 1px solid rgb(0, 121, 101);
     width: 17vw;
     height: 15vw;
@@ -147,32 +150,7 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
     animation-iteration-count: infinite;
     animation-duration: 11s;
 }
-.bg_layer div:nth-child(5){
-    border: 1px solid rgb(0, 121, 101);
-    width: 17vw;
-    height: 25vw;
-    background-color: #5DEAB7;
-    filter: opacity(0.27);
-    border-radius: 50%;
-    margin-top: 20vh;
-    margin-left: 10vw;
-    animation-name: moveCircle_2;
-    animation-iteration-count: infinite;
-    animation-duration: 17s;
-}
-.bg_layer div:nth-child(6){
-    border: 1px solid rgb(0, 121, 101);
-    width: 20vw;
-    height: 15vw;
-    background-color: #5DEAB7;
-    filter: opacity(0.27);
-    border-radius: 50%;
-    margin-top: 20vh;
-    margin-left: 50vw;
-    animation-name: moveCircle_1;
-    animation-iteration-count: infinite;
-    animation-duration: 13s;
-}
+
 @keyframes moveCircle_1{
     0%{
         border-radius: 50%;
@@ -419,13 +397,11 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
 
 /* ================== featured_projects_container */
 .featured_projects_container{
-    /* border: 1px solid red; */
     /* width: 100%; */
     margin: auto;
     margin-top: 10vh;
 }
 .featured_p_head_container{
-    /* border: 1px solid orange; */
     padding-top: 10px;
     text-align: center;
     width: 50%;
@@ -651,12 +627,16 @@ footer{
     /* margin-top: 5vh; */
     text-align: center;
     color: var(--color-light);
-    background-color: var(--nav-envelope);
+    /* background-color: var(--nav-envelope); */
+    border-bottom: 5px solid var(--nav-envelope);
     padding: 7px;
     font-size: 13px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    width: 55%;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 20px;
 }
 .bg_layer_nav{
     position: absolute;
@@ -693,6 +673,25 @@ footer{
         /* position: relative; */
         /* transform:translateX(-100%); */
         /* transition: 0.3s; */
+    }
+    .bg_layer{
+        height: 100vh;
+        position: fixed;
+    }
+    .bg_layer div:nth-child(1){
+        margin-top: 5vh;
+        width: 30vh;
+        height: 30vh;
+    }
+    .bg_layer div:nth-child(3){
+        display: block;
+        margin-top: 2vh;
+    }
+    .bg_layer div:nth-child(4){
+        display: block;
+        width: 35vh;
+        height: 35vh;
+        margin-left: 30vw;
     }
     .navBtn{
         /* display: unset; */
@@ -833,16 +832,109 @@ footer{
     }
 
 
+    /*========== Featured projects container */
+    .featured_projects_container{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* padding-inline: 10px; */
+    }
+    .featured_p_head_container{
+        /* border: 1px solid orange; */
+        width: 100%;
+    }
+    .featured_p_head_container > h2{
+        /* border: 1px solid red; */
+        font-size: clamp(10px,5vw,20px);
+    }
+    .featured_p_head_container > p{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: clamp(8px,4vw,17px);
+        letter-spacing: normal;
+    }
 
-
-
-
-
-
+    /* ========== Projects container */
     .projects_container{
+        /* display: none; */
+        /* border: 1px solid red; */
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .projects_container > div{
+        /* border: 1px solid rgb(71, 255, 95); */
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        /* display: none */
+        overflow: hidden;
+    }
+    .projects > div{
+        width: 100%;
+        /* display: none; */
+        /* border: 1px solid red; */
+        padding: 10px;
+        width: 90%;
+        margin: auto;
+    }
+    .projects > div > ul {
+        /* border: 1px solid red; */
+        /* margin: 0; */
+        margin: 20px 0px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .projects > div > ul > li{
+        margin: auto;
+    }
+    #projects > div.projects_container > div > div > div > a > span{
         display: none;
     }
+    /*================== Other works */
+    .other_works_section{
+        /* border: 1px solid red; */
+        /* margin-bottom: 20vh; */
+    }
+    .other_works_section > div > h2{
+        font-size: clamp(10px,5vw,20px);
+    }
+    .other_works_section > div > p{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: clamp(8px,4vw,17px);
+        letter-spacing: normal;
+    }
     .other_works_projects{
-        display: none;
+        /* display: none; */
+        /* border: 3px solid rgb(73, 255, 2); */
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        /* overflow: hidden; */
+    }
+    .other_works_projects > div{
+        /* border: 1px solid red; */
+        padding: 20px 10px;
+        height: fit-content;
+        /* width: 100%; */
+        /* height: fit-content; */
+        /* width: 100px; */
+        /* min-height: 200px; */
+    }
+    .other_works_projects > div > h1{
+        font-size: clamp(10px,5vw,20px);
+    }
+    .other_works_projects > div > p{
+        font-size: clamp(8px,4vw,18px);
+        display: flex;
+        align-items: center;
+        height: fit-content;
+    }
+    footer{
+        font-size: clamp(8px,4vw,18px);
     }
 }
