@@ -5,12 +5,18 @@
     --bg-hero: #10605B;
     /* ==== Text */
     --color-light: whitesmoke;
+
+    /* About */
+    --color-primary: #acd3d1;
 }
 .dark_theme{
     /* --bg-color: #a8fcf6; */
     --bg-color: #91fff8;
     --color-light: black;
     --bg-hero: #F7FEFD;
+    
+    /* About */
+    --color-primary: #136660;
 }
 *{
     margin: 0;
@@ -213,6 +219,117 @@ nav > ul > li:nth-child(1):hover,nav > ul > li:nth-child(2):hover,nav > ul > li:
         transform: rotate(180deg);
     }
 }
+
+/*================= Section */
+.section_hero{
+    /* border: 1px solid red; */
+    width: min(1070px,100%);
+    margin: auto;
+    margin-top: 7vh;
+    text-align: center;
+}
+.section_hero > div{
+    /* border: 1px solid red; */
+    color: var(--color-primary);
+    text-align: left;
+}
+.section_hero > div > p{
+    /* border: 1px solid red; */
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+.section_hero > img{
+    width: 330px;
+    /* margin: auto; */
+    margin-block: 3vh;
+    border-radius: 50%;
+    border:5px solid var(--color-primary);
+}
+.section_hero > p{
+    color: var(--color-primary);
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    /* margin-top: 5vh; */
+    text-align: left;
+}
+
+/* ================= section_technologies */
+.section_technologies{
+    /* border: 1px solid red; */
+    width: min(1070px,100%);
+    margin: auto;
+    margin-top: 7vh;
+    /* text-align: center; */
+}
+.section_technologies > div{
+    /* border: 1px solid red; */
+    margin: 10px;
+}
+.section_technologies > div > p:nth-child(1){
+    /* text-align: left; */
+    color: var(--color-primary);
+    font-weight: bolder;
+    font-size: 23px;
+    letter-spacing: 1.4px;
+}
+.section_technologies > div > p:nth-child(2){
+    /* text-align: left; */
+    font-weight: normal;
+    font-style: italic;
+    margin: 10px 0px;
+    color: var(--color-primary);
+}
+.section_technologies > div > div{
+    margin-block: 20px;
+}
+.section_technologies > div > div > ul{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+}
+.section_technologies > div > div > ul > li{
+    /* border: 1px solid red; */
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    color: var(--color-primary);
+    /* border-radius: 20px; */
+    transition: 0.3s;
+    cursor: pointer;
+}
+.section_technologies > div > div > ul > li:hover{
+    /* background-color: var(--bg-hero); */
+    border-bottom: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*==================== Responsive */
